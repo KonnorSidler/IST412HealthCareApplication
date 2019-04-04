@@ -29,6 +29,7 @@ public class FXMLCreateUserController extends FXMLLoginController implements Ini
     @FXML private PasswordField passwordField;
     @FXML protected void handleCreateButtonAction(ActionEvent event) throws IOException {
         
+        long userID = (long) (Math.random() * 10000);
         String username = usernameField.getText();
         String password = passwordField.getText();
         System.out.println(username + password);
@@ -36,7 +37,7 @@ public class FXMLCreateUserController extends FXMLLoginController implements Ini
         
         
         //Creates new user in userlist.
-        this.getUserListNav().getUserList().add(new User(username, password));
+        this.getUserListNav().getUserList().add(new User(userID, username, password));
         //Saves userlist to file with new user.
         this.getUserListNav().saveUserlist();
         Stage stage = (Stage) actiontarget.getScene().getWindow();

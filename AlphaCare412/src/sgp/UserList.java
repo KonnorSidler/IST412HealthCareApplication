@@ -54,7 +54,8 @@ public class UserList {
         return UserList;
     }
     public void createNewUser(String un, String pw){
-        UserList.add(new User(un, pw));
+        long newID = (long) (Math.random() * (10000));
+        UserList.add(new User(newID, un, pw));
     }
     public Double calculateGPA(String username){
         int totalCredits = 0;
