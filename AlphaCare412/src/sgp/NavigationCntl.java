@@ -24,7 +24,7 @@ public class NavigationCntl{
         stage.show();
     }
     public void changeSceneList(Stage stage) throws IOException{
-        Scene grades = new Scene(FXMLLoader.load(getClass().getResource("FXMLlist.fxml")), 600, 400);
+        Scene grades = new Scene(FXMLLoader.load(getClass().getResource("FXMLDoctorView.fxml")), 600, 400);
         stage.setScene(grades);
         stage.show();
     }
